@@ -6,11 +6,11 @@ on:
       ROM_URL:
         description: 'ROM_URL'
         required: true
-        default: '0'
+        default: 'https://mirrorbits.carbonrom.org/fajita/CARBON-CR-9.0-R-WEEKLY-fajita-20211013-2125.zip'
       ZIP_NAME:
         description: 'ZIP_NAME'
         required: true
-        default: '0'
+        default: 'CARBON-CR-9.0-R-WEEKLY-fajita-20211013-2125.zip'
       OS_TYPE:
         description: 'OS_TYPE'
         required: true
@@ -22,7 +22,7 @@ on:
       REPACK_NAME:
         description: 'REPACK_NAME'
         required: true
-        default: 'SGSI.zip'
+        default: 'CARBON_CR_9.0WEEKLY_fajita.zip'
 
 
 
@@ -55,7 +55,7 @@ jobs:
 
       - name: Get the SGSI tool‌‌...
         run: |
-          git clone --recurse-submodules https://github.com/xiaoxindada/SGSI-build-tool.git -b 11 $GITHUB_WORKSPACE/Tool-SGSI-build
+          git clone --recurse-submodules https://github.com/asrieldashie/SGSI-build-tool.git -b 11 $GITHUB_WORKSPACE/Tool-SGSI-build
 
       - name: Replace custom condensed content...
         run: |
