@@ -101,7 +101,7 @@ jobs:
           echo "--------------------------------------"
           ls upload_ab
           echo "--------------------------------------"
-          if [ $(ls -l "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip" | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - AB_${{ github.event.inputs.REPACK_NAME }} | split -d -b 1024m - upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; else mv AB_${{ github.event.inputs.REPACK_NAME }} upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; fi
+          if [ $(ls -l "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip" | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip" | split -d -b 1024m - upload_ab/"SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip"; else mv "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip" upload_ab/"SGSI_AB_${{ github.event.inputs.REPACK_NAME }}.zip"; fi
           echo "--------------------------------------"
           ls upload_ab
           echo "--------------------------------------"
@@ -130,7 +130,7 @@ jobs:
           echo "--------------------------------------"
           ls upload_aonly
           echo "--------------------------------------"
-          if [ $(ls -l "AONLY_${{ github.event.inputs.REPACK_NAME }}.zip" | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - AONLY_${{ github.event.inputs.REPACK_NAME }} | split -d -b 1024m - upload_aonly/AONLY_${{ github.event.inputs.REPACK_NAME }}; else mv AONLY_${{ github.event.inputs.REPACK_NAME }} upload_aonly/AONLY_${{ github.event.inputs.REPACK_NAME }}; fi
+          if [ $(ls -l "AONLY_${{ github.event.inputs.REPACK_NAME }}.zip" | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - "AONLY_${{ github.event.inputs.REPACK_NAME }}.zip" | split -d -b 1024m - upload_aonly/"AONLY_${{ github.event.inputs.REPACK_NAME }}.zip"; else mv "AONLY_${{ github.event.inputs.REPACK_NAME }}.zip" upload_aonly/"AONLY_${{ github.event.inputs.REPACK_NAME }}.zip"; fi
           echo "--------------------------------------"
           ls upload_aonly
           echo "--------------------------------------"
