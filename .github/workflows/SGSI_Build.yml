@@ -103,6 +103,7 @@ jobs:
           echo "--------------------------------------"
           if [ $(ls -l AB_${{ github.event.inputs.REPACK_NAME }} | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - AB_${{ github.event.inputs.REPACK_NAME }} | split -d -b 1024m - upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; else mv AB_${{ github.event.inputs.REPACK_NAME }} upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; fi
           echo "--------------------------------------"
+          cd upload_ab
           mv "AB_${{ github.event.inputs.REPACK_NAME }}" "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}"
           ls upload_ab
           echo "--------------------------------------"
