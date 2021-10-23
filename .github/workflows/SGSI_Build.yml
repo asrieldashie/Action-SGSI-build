@@ -90,7 +90,7 @@ jobs:
       - name: Packing(AB)...
         if: ${{ github.event.inputs.SGSI_TYPE }} == 'AB' || ${{ github.event.inputs.SGSI_TYPE }} == 'BOTH'
         run: |
-          cd $GITHUB_WORKSPACE/Tool-SGSI-build
+          cd $GITHUB_WORKSPACE/Tool-SGSI-build/SGSI
           pwd
           zip -r SGSI_AB_${{ github.event.inputs.REPACK_NAME }} *
           ls "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}"
@@ -119,7 +119,7 @@ jobs:
       - name: Packing(A-only)...
         if: ${{ github.event.inputs.SGSI_TYPE }} == 'A' || ${{ github.event.inputs.SGSI_TYPE }} == 'BOTH'
         run: |
-          cd $GITHUB_WORKSPACE/Tool-SGSI-build
+          cd $GITHUB_WORKSPACE/Tool-SGSI-build/SGSI
           pwd
           zip -r AONLY_${{ github.event.inputs.REPACK_NAME }} *
           ls "AONLY_${{ github.event.inputs.REPACK_NAME }}"
