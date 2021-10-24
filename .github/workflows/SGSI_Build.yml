@@ -6,15 +6,15 @@ on:
       ROM_URL:
         description: 'ROM_URL'
         required: true
-        default: 'https://hugeota.d.miui.com/21.5.31/miui_TUCANA_21.5.31_cb42ec9bed_11.0.zip'
+        default: 'https://example.com'
       ZIP_NAME:
         description: 'ZIP_NAME'
         required: true
-        default: 'miui_TUCANA_21.5.31_cb42ec9bed_11.0.zip'
+        default: 'example.zip'
       OS_TYPE:
         description: 'OS_TYPE'
         required: true
-        default: 'miui'
+        default: 'github'
       SGSI_TYPE:
         description: 'SGSI_TYPE(AB, A, or BOTH)'
         required: true
@@ -22,7 +22,7 @@ on:
       REPACK_NAME:
         description: 'REPACK_NAME'
         required: true
-        default: 'SGSI.zip'
+        default: 'example.zip'
 
 
 
@@ -92,8 +92,8 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/Tool-SGSI-build
           pwd
-          zip -r AB_${{ github.event.inputs.REPACK_NAME }} SGSI/*
-          ls "AB_${{ github.event.inputs.REPACK_NAME }}"
+          zip -r SGSI_AB_${{ github.event.inputs.REPACK_NAME }} SGSI/*
+          ls "SGSI_AB_${{ github.event.inputs.REPACK_NAME }}"
           echo "--------------------------------------"
           ls
           echo "--------------------------------------"
@@ -101,7 +101,7 @@ jobs:
           echo "--------------------------------------"
           ls upload_ab
           echo "--------------------------------------"
-          if [ $(ls -l AB_${{ github.event.inputs.REPACK_NAME }} | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - AB_${{ github.event.inputs.REPACK_NAME }} | split -d -b 1024m - upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; else mv AB_${{ github.event.inputs.REPACK_NAME }} upload_ab/AB_${{ github.event.inputs.REPACK_NAME }}; fi
+          if [ $(ls -l SGSI_AB_${{ github.event.inputs.REPACK_NAME }} | awk '{print $5}') -gt 2147483647 ]; then tar cvzpf - SGSI_AB_${{ github.event.inputs.REPACK_NAME }} | split -d -b 1024m - upload_ab/SGSI_AB_${{ github.event.inputs.REPACK_NAME }}; else mv SGSI_AB_${{ github.event.inputs.REPACK_NAME }} upload_ab/SGSI_AB_${{ github.event.inputs.REPACK_NAME }}; fi
           echo "--------------------------------------"
           ls upload_ab
           echo "--------------------------------------"
