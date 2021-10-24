@@ -6,15 +6,15 @@ on:
       ROM_URL:
         description: 'ROM_URL'
         required: true
-        default: 'https://mirrorbits.carbonrom.org/fajita/CARBON-CR-9.0-R-WEEKLY-fajita-20211013-2125.zip'
+        default: 'https://hugeota.d.miui.com/21.5.31/miui_TUCANA_21.5.31_cb42ec9bed_11.0.zip'
       ZIP_NAME:
         description: 'ZIP_NAME'
         required: true
-        default: 'CARBON-CR-9.0-R-WEEKLY-fajita-20211013-2125.zip'
+        default: 'miui_TUCANA_21.5.31_cb42ec9bed_11.0.zip'
       OS_TYPE:
         description: 'OS_TYPE'
         required: true
-        default: 'generic'
+        default: 'miui'
       SGSI_TYPE:
         description: 'SGSI_TYPE(AB, A, or BOTH)'
         required: true
@@ -22,7 +22,7 @@ on:
       REPACK_NAME:
         description: 'REPACK_NAME'
         required: true
-        default: 'CARBON_CR_9.0WEEKLY_fajita.zip'
+        default: 'SGSI.zip'
 
 
 
