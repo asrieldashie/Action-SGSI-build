@@ -30,6 +30,11 @@ rm -rf $1/app/BTProductionLineTool
 rm -rf $1/app/BasicDreams
 rm -rf $1/app/BluetoothMidiService
 rm -rf $1/app/BookmarkProvider
+rm -rf $1/app/Camera
+rm -rf $1/app/facebook-appmanager
+rm -rf $1/app/InMipay
+rm -rf $1/app/MiuiCompass
+rm -rf $1/app/MiuiScreenRecorder
 rm -rf $1/app/CarrierDefaultApp
 rm -rf $1/app/CatchLog
 rm -rf $1/app/CertInstaller
@@ -94,8 +99,12 @@ rm -rf $1/priv-app/Browser
 rm -rf $1/priv-app/BuiltInPrintService
 rm -rf $1/priv-app/CellBroadcastLegacyApp
 rm -rf $1/priv-app/ContentExtension
+rm -rf $1/priv-app/CleanMaster
 rm -rf $1/priv-app/DMRegService
 rm -rf $1/priv-app/DynamicSystemInstallationService
+rm -rf $1/priv-app/facebook-installer
+rm -rf $1/priv-app/facebook-services
+rm -rf $1/priv-app/GameCenterGlobal
 rm -rf $1/priv-app/MIService
 rm -rf $1/priv-app/MIShare
 rm -rf $1/priv-app/MIUIContentExtension
@@ -104,11 +113,15 @@ rm -rf $1/priv-app/MIUIPersonalAssistant
 rm -rf $1/priv-app/MIUIYellowPage
 rm -rf $1/priv-app/ManagedProvisioning
 rm -rf $1/priv-app/MiBrowserGlobal
+rm -rf $1/priv-app/MiCalendarGlobal
+rm -rf $1/priv-app/MiDrop
 rm -rf $1/priv-app/MiGameCenterSDKService
 rm -rf $1/priv-app/MiRcs
 rm -rf $1/priv-app/Mirror
 rm -rf $1/priv-app/MiuiCamera
 rm -rf $1/priv-app/MiuiGallery
+rm -rf $1/priv-app/MiuiHome
+rm -rf $1/priv-app/MiuiScanner
 rm -rf $1/priv-app/MiuiMusicGlobal
 rm -rf $1/priv-app/MiuiVideo
 rm -rf $1/priv-app/Music
@@ -124,6 +137,7 @@ rm -rf $1/priv-app/SystemHelper
 rm -rf $1/priv-app/Tag
 rm -rf $1/priv-app/UserDictionaryProvider
 rm -rf $1/priv-app/YellowPage
+rm -rf $1/product/app/YouTube
 rm -rf $1/product/app/Gmail2
 rm -rf $1/product/app/Messages
 rm -rf $1/product/app/PhotoTable
@@ -131,6 +145,7 @@ rm -rf $1/product/app/PowerOffAlarm
 rm -rf $1/product/app/aiasst_service
 rm -rf $1/product/app/talkback
 rm -rf $1/product/data-app/*
+rm -rf $1/product/priv-app/AndroidAutoStub
 rm -rf $1/product/priv-app/ConfigUpdater
 rm -rf $1/product/priv-app/GoogleDialer
 rm -rf $1/product/priv-app/OobConfig
